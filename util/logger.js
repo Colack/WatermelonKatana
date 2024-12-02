@@ -7,24 +7,20 @@ const LOG_LEVELS = {
     DEBUG: 'DEBUG'
 }
 
-class Logger {
-    constructor(message, level) {
-        this.message = message;
-        this.level = level;
-    }
-
-    formatMessage() {
-        switch (this.level) {
-            case LOG_LEVELS.INFO:
-                return picocolors.green(this.message);
-            case LOG_LEVELS.WARN:
-                return picocolors.yellow(this.message);
-            case LOG_LEVELS.ERROR:
-                return picocolors.red(this.message);
-            case LOG_LEVELS.DEBUG:
-                return picocolors.blue(this.message);
-        }
-    }
+function logInfo(message) {
+    return picocolors.green(message);
 }
 
-module.exports = { Logger, LOG_LEVELS };
+function logWarn(message) {
+    return picocolors.yellow(message);
+}
+
+function logError(message) {
+    return picocolors.red(message);
+}
+
+function logDebug(message) {
+    return picocolors.blue(message);
+}
+
+module.exports = { LOG_LEVELS, logInfo, logWarn, logError, logDebug };
