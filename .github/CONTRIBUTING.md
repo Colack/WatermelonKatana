@@ -8,7 +8,8 @@ There are many ways you can get involved and help make our project even better. 
 
 - [Questions](#-questions)
 - [Issues](#-issues)
-- [How to Contribute](#-how-to-contribute)
+- [Contributing](#️-contributing)
+  - [Good First Issues](#-good-first-issues)
 - [Code of Conduct](#-code-of-conduct)
 
 ## ❓ Questions
@@ -26,7 +27,7 @@ Found a bug or have a feature request? Head over to our [Issues](https://github.
 
 Once an issue is resolved, tag a maintainer to review and close it.
 
-## 🛠️ How to Contribute
+## 🛠️ Contributing
 
 There are many aspects of the WatermelonKatana codebase you can work on. Here’s how you can get started:
 
