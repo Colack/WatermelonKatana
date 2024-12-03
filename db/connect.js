@@ -1,15 +1,21 @@
 const Mongoose = require("mongoose");
-const { Logger } = require('../util/js/logger');
+const { Logger, logInfo } = require('../util/js/logger');
+const dotenv = require('dotenv').config();
+
 Mongoose.set('strictQuery',true);
 
-const uri = process.env.MONGODB_PASSWORD;
-
 const connectDB = async () => {
-  await Mongoose.connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-  Logger.info("Database Connected");
+  try {
+    await Mongoose.connect(process.env.MONGODB_PASSWORD, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
+    console.log(logInfo("MongoDB Connected"));
+  }
+  catch (err) {
+    console.error(err.message);
+    process.exit(1);
+  }
 };
 
 module.exports = connectDB;

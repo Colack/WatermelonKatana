@@ -29,7 +29,7 @@ const logger = require('./util/js/logger');
 const PORT = process.env.PORT || 3000;
 const app = express();
 const turbo = new Turbo(app, express.static('./public/turbo'))
-const cldir = __dirname + "public/html";
+const cldir = __dirname + "/public/html";
 const bigPaths = new RegExp(`^/datablock_storage/[^/]+/(${["populate_key_values", "populate_tables"].join("|")})`);
 
 /**
@@ -226,7 +226,7 @@ app.get("/project/:id", checkAuth, async (req, res) => {
  * Start the Server
  */
 const server = app.listen(PORT, () => {
-    logger.info(`Server running on port ${PORT}`);
+    console.log(logger.logInfo(`Server running on port ${PORT}`));
 });
 
 /**
@@ -238,6 +238,6 @@ server.setTimeout(30000);
  * Server Functions
  */
 process.on('unhandledRejection', (err) => {
-    logger.error(err);
+    console.log(logger.logError(`Unhandled Rejection: ${err.message}`));
     process.exit(1);
 });

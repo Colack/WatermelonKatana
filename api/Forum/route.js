@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-const Posts = require("../../Database/model/Posts")
+const Posts = require("../../db/model/Posts")
 const PostAPI = require("./post");
 const poster = new PostAPI(Posts,"posts");
-const { adminAuth, userAuth } = require("../../Middleware/auth");
+const { adminAuth, userAuth } = require("../../middleware/auth");
 
 poster.route(router,userAuth,adminAuth);
 

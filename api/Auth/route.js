@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { register, login, update, updateRole, deleteUser, deleteSelf, listUsers, userdata, check, changePassword, follow, unfollow } = require("./auth");
 const { sendVerification, verifyUser, sendPasswordReset, resetPassword } = require("./verify");
-const { adminAuth, userAuth, checkAuth } = require("../../Middleware/auth");
+const { adminAuth, userAuth, checkAuth } = require("../../middleware/auth");
 
 router.route("/register").post(register);
 router.route("/login").post(login);

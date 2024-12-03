@@ -2,7 +2,7 @@
     "name": "role_auth",
     "version": "1.0.0",
     "description": "User Role Authentication",
-    "main": "server.js",
+    "main": "index.js",
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
@@ -18,6 +18,7 @@
         "cookieparser": "^0.1.0",
         "cors": "^2.8.5",
         "cross-fetch": "^4.0.0",
+        "dotenv": "^16.4.6",
         "ejs": "^3.1.6",
         "express": "^4.19.2",
         "gtts": "^0.2.1",

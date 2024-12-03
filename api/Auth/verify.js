@@ -1,5 +1,5 @@
 
-const Users = require("../../Database/model/Users");
+const Users = require("../../db/model/Users");
 const mailer = require("../mail");
 const bcrypt = require("bcryptjs");
 const origin = "https://watermelonkatana.com";
