@@ -1,5 +1,5 @@
 const Mongoose = require("mongoose");
-const { Logger } = require('../util/logger');
+const { Logger } = require('../util/js/logger');
 Mongoose.set('strictQuery',true);
 
 const uri = process.env.MONGODB_PASSWORD;
